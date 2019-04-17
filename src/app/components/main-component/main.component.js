@@ -4,6 +4,6 @@ function createComponentMarkup(data) {
     `
 }
 
-export function renderComponent(element, data) {
+export default function renderComponent(element, data) {
     element.innerHTML = createComponentMarkup(data);
 }
