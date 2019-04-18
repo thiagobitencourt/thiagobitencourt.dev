@@ -3,7 +3,11 @@
     <ul class="menu-items">
         ${
             this.menuItems.map((item, index) => (
-                `<li id="menu-item-${index}" class="menu-item">${ item.label }</li>`
+                `<li id="menu-item-${index}" class="menu-item">
+                    <a href="${item.link}">
+                        ${ item.label }
+                    </a>
+                </li>`
             )).join('')
         }
     </ul>

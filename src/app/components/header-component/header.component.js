@@ -5,11 +5,11 @@ export default function headerComponent(element, data = {}) {
         ...data,
         blogTitle: 'Thiago Bitencourt',
         menuItems: [
-            { label: 'Inicio' },
-            { label: 'Artigos' },
-            { label: 'Projetos' },
-            { label: 'Sobre mim' },
-            { label: 'Login' }
+            { label: 'Inicio', link: '#/' },
+            { label: 'Artigos', link: '#/articles' },
+            { label: 'Projetos', link: '#/projects' },
+            { label: 'Sobre mim', link: '#/aboutme' },
+            { label: 'Login', link: '#/login' }
         ]
     }
     element.innerHTML = headerTemplate(headerData);
