@@ -7,7 +7,7 @@ module.exports = {
         rules: [
             {
                 test: /\.html$/,
-                use: ['html-loader']
+                use: ['html-es6-template-loader']
             },
             {
                 test: /\.(svg|png|jpg|gif)$/,

@@ -1,0 +1,10 @@
+<section class="">${ this.blogTitle }</section>
+<nav class="navigation">
+    <ul class="menu-items">
+        ${
+            this.menuItems.map((item, index) => (
+                `<li id="menu-item-${index}" class="menu-item">${ item.label }</li>`
+            )).join('')
+        }
+    </ul>
+</nav>

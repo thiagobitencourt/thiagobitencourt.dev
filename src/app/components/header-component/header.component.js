@@ -1,18 +1,16 @@
-function createComponentMarkup(data) {
-    return `
-        <section class="">Thiago Bitencourt</section>
-        <nav class="navigation">
-            <ul>
-                <li>Início</li>
-                <li>Projetos</li>
-                <li>Artigos</li>
-                <li>Sobre mim</li>
-                <li>Login</li>
-            </ul>
-        </nav>
-    `
-}
+import headerTemplate from './header.component.html';
 
-export default function headerComponent(element, data) {
-    element.innerHTML = createComponentMarkup(data);
+export default function headerComponent(element, data = {}) {
+    const headerData = {
+        ...data,
+        blogTitle: 'Thiago Bitencourt',
+        menuItems: [
+            { label: 'Inicio' },
+            { label: 'Artigos' },
+            { label: 'Projetos' },
+            { label: 'Sobre mim' },
+            { label: 'Login' }
+        ]
+    }
+    element.innerHTML = headerTemplate(headerData);
 }

@@ -1,9 +1,9 @@
-function createComponentMarkup(data) {
-    return `
-        <h1>Welcom back ${data.username}!</h1>
-    `
-}
+import mainTemplate from './main.component.html';
 
-export default function renderComponent(element, data) {
-    element.innerHTML = createComponentMarkup(data);
+export default function renderComponent(element, data = {}) {
+    const mainData = {
+        ...data,
+        username: 'Main user'
+    }
+    element.innerHTML = mainTemplate(mainData);
 }

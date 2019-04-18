@@ -5,4 +5,4 @@ const headerContainer = document.getElementById('header-component');
 const mainContainer = document.getElementById('main-content-component');
 
 headerContainer && headerComponent(headerContainer);
-mainContainer && mainComponent(mainContainer, { username: 'Main user' });
+mainContainer && mainComponent(mainContainer);
