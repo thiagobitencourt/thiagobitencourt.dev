@@ -14,6 +14,8 @@ export default class RouterService {
     handleRouteChange() {
         let { hash } = window.location;
         const [a, route, ...params ] = hash.split('/');
+        if(route == undefined) return;
+
         const routePath = `${a}/${route}`;
         (this.routes[routePath] || noop)(routePath, params);
     }
@@ -22,7 +24,7 @@ export default class RouterService {
         this.routes[route] = handler;
     }
 
-    navigate(route, params = []) {
+    static navigate(route, params = []) {
         window.location.hash = [ route, ...params ].join('/');
     }
 }

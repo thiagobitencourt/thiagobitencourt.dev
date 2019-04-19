@@ -1,0 +1,15 @@
+<article>
+    <h1>${ this.article.title }</h1>
+    <section>
+        <span>Autor: ${ this.article.author }</span>
+        <span>${ this.article.publicationDate }</span>
+        <span>Tags: ${ this.article.tags.join(', ') }</span>
+    </section>
+    <main>
+        ${ this.article.body }
+    </main>
+</article>
+
+<section>
+    ${ this.params.join(', ') }
+</section>

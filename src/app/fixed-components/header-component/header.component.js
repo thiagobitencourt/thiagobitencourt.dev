@@ -7,8 +7,8 @@ export default function headerComponent(element, data = {}) {
         menuItems: [
             { label: 'Inicio', link: '#/' },
             { label: 'Artigos', link: '#/articles' },
-            { label: 'Projetos', link: '#/projects' },
-            { label: 'Sobre mim', link: '#/aboutme' },
+            // { label: 'Projetos', link: '#/projects' },
+            // { label: 'Sobre mim', link: '#/aboutme' },
             { label: 'Login', link: '#/login' }
         ]
     }
