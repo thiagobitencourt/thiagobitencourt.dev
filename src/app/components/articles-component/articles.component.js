@@ -1,20 +1,22 @@
 import template from './articles.component.html';
+import ApiService from '../../services/api.service';
 
 export default class ArticlesComponent {
     constructor(containerElement) {
         this.container = containerElement;
+        this.articles = [];
+    }
+
+    getArticles() {
+        return ApiService.getArticles().then(articles => {
+            this.articles = articles;
+            return this.articles;
+        });
     }
 
     render() {
-        let articles = [
-            { 
-                title: 'Olá mundo!',
-                author: 'Fulano Sobrenome',
-                tags: [ 'first' ],
-                publicationDate: new Date()
-            }
-        ];
-
-        this.container.innerHTML = template({ articles });
+        this.getArticles().then(articles => 
+            this.container.innerHTML = template({ articles })
+        )
     }
 }
