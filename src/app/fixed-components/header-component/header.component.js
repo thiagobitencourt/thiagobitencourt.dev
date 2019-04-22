@@ -1,3 +1,4 @@
+import './header.component.scss';
 import headerTemplate from './header.component.html';
 
 export default function headerComponent(element, data = {}) {

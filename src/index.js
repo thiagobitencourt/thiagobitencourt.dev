@@ -1,3 +1,5 @@
+import './main.scss';
+
 import bootstrap from './app/routes';
 // Fixed components
 import headerComponent from './app/fixed-components/header-component/header.component';

@@ -1,0 +1,36 @@
+.header {
+    height: 55px;
+    display: table-cell;
+    vertical-align: middle;
+
+    .header-section {
+        display: inline-block;
+    }
+
+    .title-section {
+        font-weight: bold;
+
+        &::before {
+            content: '<';
+        }
+
+        &::after {
+            content: '/>';
+        }
+    }
+
+    .nav-section {
+        float: right;
+
+        .menu-item {
+            display: inline-block;
+            margin: 0 15px;
+            text-decoration: none;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+}

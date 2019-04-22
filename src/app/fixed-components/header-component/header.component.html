@@ -1,14 +1,20 @@
-<section class="">${ this.blogTitle }</section>
-<nav class="navigation">
-    <ul class="menu-items">
-        ${
-            this.menuItems.map((item, index) => (
-                `<li id="menu-item-${index}" class="menu-item">
-                    <a href="${item.link}">
-                        ${ item.label }
-                    </a>
-                </li>`
-            )).join('')
-        }
-    </ul>
-</nav>
+<section class="header">
+    <section class="header-section title-section">
+        ${ this.blogTitle }
+    </section>
+    <section class="header-section nav-section">
+        <nav class="navigation">
+            <ul class="menu-items">
+                ${
+                    this.menuItems.map((item, index) => (
+                        `<li id="menu-item-${index}" class="menu-item">
+                            <a href="${item.link}">
+                                ${ item.label }
+                            </a>
+                        </li>`
+                    )).join('')
+                }
+            </ul>
+        </nav>
+    </section>
+</section>
