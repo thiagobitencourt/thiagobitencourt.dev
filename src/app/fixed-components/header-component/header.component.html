@@ -1,20 +1,18 @@
-<section class="header">
-    <section class="header-section title-section">
+<section class="header-component">
+    <section class="header-component__section header-component__title">
         ${ this.blogTitle }
     </section>
-    <section class="header-section nav-section">
-        <nav class="navigation">
-            <ul class="menu-items">
-                ${
-                    this.menuItems.map((item, index) => (
-                        `<li id="menu-item-${index}" class="menu-item">
-                            <a href="${item.link}">
-                                ${ item.label }
-                            </a>
-                        </li>`
-                    )).join('')
-                }
-            </ul>
-        </nav>
-    </section>
+    <nav class="header-component__section header-component__navigation">
+        <ul class="menu">
+            ${
+                this.menuItems.map((item, index) => (
+                    `<li id="menu-item-${index}" class="menu-item ${ item.active ? 'active' : '' }">
+                        <a href="${item.link}">
+                            ${ item.label }
+                        </a>
+                    </li>`
+                )).join('')
+            }
+        </ul>
+    </nav>
 </section>

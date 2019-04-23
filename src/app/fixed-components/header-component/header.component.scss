@@ -1,25 +1,22 @@
-.header {
+@import 'src/assets/styles/theme';
+
+.header-component {
     height: 55px;
     display: table-cell;
     vertical-align: middle;
+    padding: 0 30px;
+    color: $primary-text-color;
 
-    .header-section {
+    .header-component__section {
         display: inline-block;
     }
 
-    .title-section {
+    .header-component__title {
         font-weight: bold;
-
-        &::before {
-            content: '<';
-        }
-
-        &::after {
-            content: '/>';
-        }
+        font-size: 20px;
     }
 
-    .nav-section {
+    .header-component__navigation {
         float: right;
 
         .menu-item {
@@ -29,6 +26,11 @@
 
             a {
                 text-decoration: none;
+                color: inherit;
+            }
+
+            &.active, &:hover {
+                border-bottom: 4px solid $primary-color;
             }
         }
     }

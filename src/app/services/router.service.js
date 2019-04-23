@@ -16,13 +16,10 @@ export default class RouterService {
     }
 
     handleRouteChange() {
-        let { hash } = window.location;
-        const [a, route, ...params ] = hash.split('/');
-        if(route == undefined) {
+        const { routePath, params } = RouterService.currentRoute();
+        if(routePath.indexOf('undefined') != -1) {
             return RouterService.navigate(this.defaultRoute);
         }
-
-        const routePath = `${a}/${route}`;
         const Component = this.getRouteComponent(routePath) || this.notFound;
         new Component(this.rootElement).render(routePath, params);
     }
@@ -44,5 +41,12 @@ export default class RouterService {
 
     static addRoute(route, handler) {
         this.routes[route] = handler;
+    }
+
+    static currentRoute() {
+        let { hash } = window.location;
+        const [a, route, ...params ] = hash.split('/');
+        const routePath = `${a}/${route}`;
+        return { params, routePath }
     }
 }
