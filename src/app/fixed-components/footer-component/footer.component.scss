@@ -1,0 +1,17 @@
+@import 'src/assets/styles/theme';
+
+.footer-component {
+    font-style: italic;
+    color: $primary-text-color;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
