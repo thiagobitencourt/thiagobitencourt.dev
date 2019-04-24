@@ -1,16 +1,24 @@
-<section>
+<section class="articles">
     ${
         this.articles.map(article => (
-            `<article>
-                <h3>
+            `<article class="article">
+                <h3 class="article__title">
                     <a href="#/article/${ article.id }">
                         ${ article.title }
                     </a>
                 </h3>
-                <section>
-                    <span>Autor: ${ article.author }</span>
-                    <span>${ article.publicationDate }</span>
-                    <span>Tags: ${ article.tags.join(', ') }</span>
+                <section class="article__summary">
+                    <p>${ article.summary }</p>
+                </section>
+                <section class="article__info">
+                    <span class="article__author">
+                        <a href="#/">
+                            ${ article.author }
+                        </a>
+                    </span>
+                    <span class="article__publication">
+                        ${ this.formattedData(article.publicationDate) }
+                    </span>
                 </section>
             </article>`
         )).join('')

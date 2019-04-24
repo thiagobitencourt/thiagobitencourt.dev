@@ -1,0 +1,51 @@
+@import 'src/assets/styles/theme';
+
+.articles {
+    margin: 15px 15%;
+
+    .article {
+        margin: 20px;
+
+        &:not(:last-child) {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #CCC;
+        }
+
+        .article__title {
+            font-size: 35px;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+
+                a {
+                    border-bottom: 1px solid $primary-color;
+                }
+            }
+        }
+
+        .article__summary {
+            font-style: italic;
+            margin: 10px 0;
+        }
+
+        .article__info {
+            padding: 5px 0;
+            font-style: italic;
+            font-size: 14px;
+
+            .article__author {
+                &:hover {
+                    a {
+                        border-bottom: 1px solid $primary-color;
+                    }
+                }
+            }
+
+            .article__publication {
+                margin-left: 30px;
+            }
+        }
+    }
+}
