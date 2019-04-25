@@ -1,0 +1,26 @@
+.get-back-button {
+    text-align: left;
+}
+
+.article-viewer {
+    text-align: center;
+    
+    .article-viewer__title {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 20px;
+    }
+
+    .article-viewer__summary {
+        font-style: italic;
+        font-size: 16px;
+        margin: 20px 50px;
+        text-align: justify;
+    }
+
+    .article-viewer__content {
+        font-size: 18px;
+        text-align: justify;
+        line-height: 20pt;
+    }
+}

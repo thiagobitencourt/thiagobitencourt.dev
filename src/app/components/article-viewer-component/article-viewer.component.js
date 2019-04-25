@@ -1,7 +1,9 @@
 import template from './article-viewer.component.html';
 import ApiService from '../../services/api.service';
+import ArticleInfo from '../../fixed-components/article-info-component/article-info.component';
+import './article-viewer.component.scss';
 
-export default class ArticleCiewerComponent {
+export default class ArticleViewerComponent {
     constructor(containerElement) {
         this.container = containerElement;
     }
@@ -13,7 +15,10 @@ export default class ArticleCiewerComponent {
     render(route, params) {
         const [ id ] = params;
         this.getArticle(id).then(article => (
-            this.container.innerHTML = template({ article, params })
+            this.container.innerHTML = template({
+                article,
+                articleInfoComponent: new ArticleInfo(article).getComponent()
+            })
         ))
     }
 }

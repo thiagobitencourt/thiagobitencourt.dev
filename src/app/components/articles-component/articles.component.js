@@ -1,10 +1,7 @@
 import template from './articles.component.html';
 import ApiService from '../../services/api.service';
+import ArticleInfo from '../../fixed-components/article-info-component/article-info.component';
 import './articles.component.scss';
-
-const formattedData = (date) => (
-    `${date.getDate()}/${(date.getMonth() < 9 ? '0' : '') + (date.getMonth() + 1)}/${date.getFullYear()}`
-)
 
 export default class ArticlesComponent {
     constructor(containerElement) {
@@ -20,8 +17,9 @@ export default class ArticlesComponent {
     }
 
     render() {
+        const getArticleInfo = article => new ArticleInfo(article).getComponent();
         this.getArticles().then(articles => 
-            this.container.innerHTML = template({ articles, formattedData })
+            this.container.innerHTML = template({ articles, getArticleInfo })
         )
     }
 }

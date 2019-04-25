@@ -1,5 +1,15 @@
 @import './assets/styles/reset';
+@import './assets/styles/theme';
+@import './assets/styles/main-component';
 @import './assets/styles/header';
 @import './assets/styles/footer';
 
-// import vendor css files and others scss files here.
+.clickable-link {
+    &:hover {
+        cursor: pointer;
+    
+        a {
+            border-bottom: 1px solid $primary-color;
+        }
+    }
+}

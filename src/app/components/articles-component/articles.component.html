@@ -2,7 +2,7 @@
     ${
         this.articles.map(article => (
             `<article class="article">
-                <h3 class="article__title">
+                <h3 class="article__title clickable-link">
                     <a href="#/article/${ article.id }">
                         ${ article.title }
                     </a>
@@ -10,15 +10,9 @@
                 <section class="article__summary">
                     <p>${ article.summary }</p>
                 </section>
+                
                 <section class="article__info">
-                    <span class="article__author">
-                        <a href="#/">
-                            ${ article.author }
-                        </a>
-                    </span>
-                    <span class="article__publication">
-                        ${ this.formattedData(article.publicationDate) }
-                    </span>
+                    ${ this.getArticleInfo(article) }
                 </section>
             </article>`
         )).join('')

@@ -1,15 +1,19 @@
-<article>
-    <h1>${ this.article.title }</h1>
-    <section>
-        <span>Autor: ${ this.article.author }</span>
-        <span>${ this.article.publicationDate }</span>
-        <span>Tags: ${ this.article.tags.join(', ') }</span>
+<span class="get-back-button clickable-link">
+    <a href="#/articles">&lArr; Voltar</a>
+</span>
+
+<article class="article-viewer">
+    </span>
+    <section class="article-viewer__title">
+        <h1>${ this.article.title }</h1>
     </section>
-    <main>
+    
+    ${ this.articleInfoComponent }
+    
+    <section class="article-viewer__summary">
+            ${ this.article.summary }
+    </section>
+    <main class="article-viewer__content">
         ${ this.article.body }
     </main>
 </article>
-
-<section>
-    ${ this.params.join(', ') }
-</section>
