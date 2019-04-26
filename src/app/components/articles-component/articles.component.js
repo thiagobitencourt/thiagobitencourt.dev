@@ -1,6 +1,7 @@
 import template from './articles.component.html';
 import ApiService from '../../services/api.service';
 import ArticleInfo from '../../fixed-components/article-info-component/article-info.component';
+import noArticleTemplate from './no-articles.html';
 import './articles.component.scss';
 
 export default class ArticlesComponent {
@@ -11,15 +12,17 @@ export default class ArticlesComponent {
 
     getArticles() {
         return ApiService.getArticles().then(articles => {
-            this.articles = articles;
+            this.articles = articles || [];
             return this.articles;
         });
     }
 
     render() {
         const getArticleInfo = article => new ArticleInfo(article).getComponent();
-        this.getArticles().then(articles => 
-            this.container.innerHTML = template({ articles, getArticleInfo })
-        )
+        this.getArticles().then(articles => {
+            this.container.innerHTML = articles.length
+                ? template({ articles, getArticleInfo })
+                : noArticleTemplate()
+        })
     }
 }
