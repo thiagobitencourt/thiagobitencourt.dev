@@ -6,12 +6,12 @@ const mapData = result => result.data || {};
 
 export default class ApiService {
     static getArticles(...params) {
-        return Promise.resolve(articles);
+        return Promise.resolve([]);
         // return instance.get('/article', { params }).then(mapData);
     }
 
     static getSingleArticle(id) {
-        return Promise.resolve(getArticle(id));
+        return Promise.resolve({});
         // return instance.get('/article', { params: { id } }).then(mapData);
     }
 }
