@@ -3,7 +3,6 @@
 .articles {
     .article {
         margin: 20px;
-        margin-bottom: 30px;
 
         &:not(:last-child) {
             border-bottom: 1px solid #CCC;
@@ -13,6 +12,7 @@
             font-size: 35px;
             font-weight: bold;
             text-decoration: none;
+            margin-bottom: 10px;
 
             a {
                 border-bottom: none;
@@ -26,10 +26,6 @@
         .article__summary {
             font-style: italic;
             margin: 10px 0;
-        }
-
-        .article__info {
-            margin-top: 20px
         }
     }
 }

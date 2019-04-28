@@ -11,7 +11,8 @@ export default function bootstrap(rootSelector) {
     new RouterService([
         { 
             route: '#/',
-            component: HomeComponent
+            // component: HomeComponent
+            component: ArticlesComponent
         },
         {
             route: '#/articles',

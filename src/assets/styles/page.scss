@@ -1,0 +1,33 @@
+@import './reset.scss';
+
+header {
+    width: 100%;
+    display: table;
+}
+
+main#main-component {
+    margin: 15px 15%;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    position: fixed;
+    bottom: 0;
+}
+
+a {
+	color: inherit;
+    text-decoration: none;
+    
+    &.colored {
+        font-style: italic;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    &:hover {
+        border-bottom: 1px solid $primary-color;
+    }
+}
