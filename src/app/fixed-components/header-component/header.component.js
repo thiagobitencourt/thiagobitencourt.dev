@@ -8,8 +8,8 @@ function renderComponent(element, data) {
         ...data,
         blogTitle: 'Thiago Bitencourt',
         menuItems: [
-            { label: 'Início', link: '#/', active: routePath == '#/' },
-            { label: 'Artigos', link: '#/articles', active: routePath == '#/articles' }
+            // { label: 'Início', link: '#/', active: routePath == '#/' },
+            // { label: 'Artigos', link: '#/articles', active: routePath == '#/articles' }
         ]
     }
 

@@ -27,7 +27,7 @@ export default function bootstrap(rootSelector) {
         }
     ], {
         rootSelector,
-        defaultRoute: '#/',
+        defaultRoute: '#/articles',
         notFoundComponent: NotFoundComponent
     });
 }

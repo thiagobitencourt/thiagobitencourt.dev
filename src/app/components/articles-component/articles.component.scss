@@ -13,6 +13,14 @@
             font-size: 35px;
             font-weight: bold;
             text-decoration: none;
+
+            a {
+                border-bottom: none;
+                font-style: normal;
+                &:hover {
+                    border-bottom: 1px solid $primary-color;
+                }
+            }
         }
 
         .article__summary {
