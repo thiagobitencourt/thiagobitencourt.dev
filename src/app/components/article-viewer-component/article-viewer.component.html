@@ -11,7 +11,7 @@
     ${ this.articleInfoComponent }
     
     <section class="article-viewer__summary">
-            ${ this.article.summary }
+        ${ this.markdown.makeHtml(this.article.summary) }
     </section>
     <main class="article-viewer__content">
         <section class="article">

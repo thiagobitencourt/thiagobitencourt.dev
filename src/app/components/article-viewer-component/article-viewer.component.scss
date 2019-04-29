@@ -2,11 +2,14 @@
 
 .article-viewer {
     text-align: center;
+    font-family: 'Lora', serif;
+    margin-top: -20px;
 
     .article-viewer__title {
-        font-size: 40px;
-        font-weight: bold;
-        margin: 20px;
+        h1 {
+            font-size: 50px;
+            margin: 20px 0;
+        }
     }
 
     .article-viewer__summary {
@@ -25,7 +28,4 @@
 
 .get-back-button {
     text-align: left;
-    a {
-        border-bottom: none;
-    }
 }
