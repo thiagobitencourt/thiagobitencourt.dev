@@ -1,11 +1,11 @@
 export const articles = [
     { 
-        id: 'helo-world-1a2b3c',
+        key: 'helo-world-1a2b3c',
         title: 'Olá mundo!',
         author: 'Thiago Bitencourt',
         publicationDate: new Date(2019, 4, 1),
         summary: 'Enfim está no ar minha página pessoal/blog. Neste primeiro artigo escrevo sobre quais são minhas intensões e ambições para esta página.',
-        body: 
+        content: 
 `A muito tempo que tenho vontade de ter uma página pessoal e um blog no qual possa publicar alguns artigos técnicos. Vejo muitos desenvolvedores que seguem esta prática de escrever sobre assuntos relacionados a suas habilidades e competências e eu sempre quis imitá-los e pela primeira vez _tomei vergonha na cara_, _sentei a bunda na cadeira_ e criei esta página, que está longe de ser perfeita mas já é alguma coisa.
 
 ## Quem sou eu? 
@@ -55,4 +55,4 @@ Se você está lendo isso, eu realmente agradeço a visita, abaixo vou deixar al
     }
 ]
 
-export const getArticle = (id) => articles.find(article => article.id == id);
+export const getArticle = (key) => articles.find(article => article.key == key);

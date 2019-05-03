@@ -15,13 +15,13 @@ export default class ArticleViewerComponent {
         this.container = containerElement;
     }
 
-    getArticle(id) {
-        return ApiService.getSingleArticle(id).then(article => this.article = article);
+    getArticle(key) {
+        return ApiService.getSingleArticle(key).then(article => this.article = article);
     }
 
-    render(route, params) {
-        const [ id ] = params;
-        this.getArticle(id).then(article => (
+    render(_, params) {
+        const [ key ] = params;
+        this.getArticle(key).then(article => (
             this.container.innerHTML = template({
                 article,
                 markdown: new showdown.Converter(showOptions),
