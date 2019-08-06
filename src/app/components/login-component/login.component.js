@@ -13,12 +13,12 @@ export default class LoginComponent {
 
     eventBinding(component) {
         let loginButton = component.querySelector('#btn-login');
-        loginButton.addEventListener('click', this.loginAction.bind(this));
+        loginButton.addEventListener('click', this.loginAction.bind(this, component));
     }
 
-    loginAction(event) {
+    loginAction(container, event) {
         event.preventDefault();
-        const form = this.container.querySelector('form');
+        const form = container.querySelector('form');
         const loginObject = {
             username: form.username.value,
             password: form.password.value
